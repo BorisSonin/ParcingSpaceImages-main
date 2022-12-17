@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ParcingJSON" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZI-La-qIY">
+                                <rect key="frame" x="50" y="741.33333333333337" width="290" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="buttonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="xcD-d5-PEj"/>
+                                    <segue destination="eR8-xr-fiq" kind="show" id="aIw-ZT-NV0"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wOg-oM-Ih0">
+                                <rect key="frame" x="16" y="130" width="358" height="571.33333333333337"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Astronomy Picture of the Day" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUW-um-d9J">
+                                <rect key="frame" x="30" y="66.333333333333329" width="330" height="28.666666666666671"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="9hD-8G-Yqk">
+                                <rect key="frame" x="185" y="405" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wOg-oM-Ih0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="4Wi-SW-F8E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wOg-oM-Ih0" secondAttribute="trailing" constant="16" id="EgY-K0-Cps"/>
+                            <constraint firstItem="wOg-oM-Ih0" firstAttribute="top" secondItem="TUW-um-d9J" secondAttribute="bottom" constant="35" id="Hny-Pp-EPO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WZI-La-qIY" secondAttribute="bottom" multiplier="0.85" constant="150" id="IHy-qa-3Pn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WZI-La-qIY" secondAttribute="trailing" constant="50" id="VXP-Vy-DUa"/>
+                            <constraint firstItem="TUW-um-d9J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ZWr-69-swo"/>
+                            <constraint firstItem="WZI-La-qIY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="jVq-gc-mYP"/>
+                            <constraint firstItem="WZI-La-qIY" firstAttribute="top" secondItem="wOg-oM-Ih0" secondAttribute="bottom" constant="40" id="rcd-TF-WGx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TUW-um-d9J" secondAttribute="trailing" constant="30" id="uzK-ry-epV"/>
+                            <constraint firstItem="TUW-um-d9J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" multiplier="1.2" constant="10" id="v8Q-e9-xRw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="9hD-8G-Yqk" id="UxA-yG-CeH"/>
+                        <outlet property="descriptionButton" destination="WZI-La-qIY" id="Tj4-pu-p65"/>
+                        <outlet property="imageView" destination="wOg-oM-Ih0" id="28X-uL-1dy"/>
+                        <outlet property="label" destination="TUW-um-d9J" id="IaD-C5-sH3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="72.51908396946564" y="-34.507042253521128"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="QjD-tc-1Qg">
+            <objects>
+                <viewController id="eR8-xr-fiq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E3m-Pq-zFz">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aH1-RK-cbu">
+                                <rect key="frame" x="16" y="57" width="358" height="685"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bVQ-fu-X8m"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aH1-RK-cbu" firstAttribute="leading" secondItem="bVQ-fu-X8m" secondAttribute="leading" constant="16" id="VAC-we-yQa"/>
+                            <constraint firstItem="bVQ-fu-X8m" firstAttribute="bottom" secondItem="aH1-RK-cbu" secondAttribute="bottom" constant="45" id="YTM-MA-NU0"/>
+                            <constraint firstItem="bVQ-fu-X8m" firstAttribute="trailing" secondItem="aH1-RK-cbu" secondAttribute="trailing" constant="16" id="sRI-Uu-2p8"/>
+                            <constraint firstItem="aH1-RK-cbu" firstAttribute="top" secondItem="bVQ-fu-X8m" secondAttribute="top" constant="10" id="xAn-ku-d0m"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="UpQ-Vk-W85"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VHl-CR-MGk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="890.83969465648852" y="-35.211267605633807"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
