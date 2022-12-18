@@ -65,37 +65,49 @@
             </objects>
             <point key="canvasLocation" x="72.51908396946564" y="-34.507042253521128"/>
         </scene>
-        <!--View Controller-->
+        <!--Description View Controller-->
         <scene sceneID="QjD-tc-1Qg">
             <objects>
-                <viewController id="eR8-xr-fiq" sceneMemberID="viewController">
+                <viewController id="eR8-xr-fiq" customClass="DescriptionViewController" customModule="ParcingJSON" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E3m-Pq-zFz">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aH1-RK-cbu">
-                                <rect key="frame" x="16" y="57" width="358" height="685"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aH1-RK-cbu">
+                                <rect key="frame" x="16" y="143.33333333333331" width="358" height="598.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImK-f0-vO4">
+                                <rect key="frame" x="20" y="67" width="350" height="26.333333333333329"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bVQ-fu-X8m"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="aH1-RK-cbu" firstAttribute="leading" secondItem="bVQ-fu-X8m" secondAttribute="leading" constant="16" id="VAC-we-yQa"/>
-                            <constraint firstItem="bVQ-fu-X8m" firstAttribute="bottom" secondItem="aH1-RK-cbu" secondAttribute="bottom" constant="45" id="YTM-MA-NU0"/>
-                            <constraint firstItem="bVQ-fu-X8m" firstAttribute="trailing" secondItem="aH1-RK-cbu" secondAttribute="trailing" constant="16" id="sRI-Uu-2p8"/>
-                            <constraint firstItem="aH1-RK-cbu" firstAttribute="top" secondItem="bVQ-fu-X8m" secondAttribute="top" constant="10" id="xAn-ku-d0m"/>
+                            <constraint firstItem="bVQ-fu-X8m" firstAttribute="bottom" secondItem="aH1-RK-cbu" secondAttribute="bottom" constant="45" id="0tL-hA-Upn"/>
+                            <constraint firstItem="aH1-RK-cbu" firstAttribute="leading" secondItem="bVQ-fu-X8m" secondAttribute="leading" constant="16" id="Ebl-uc-Wkl"/>
+                            <constraint firstItem="ImK-f0-vO4" firstAttribute="leading" secondItem="bVQ-fu-X8m" secondAttribute="leading" constant="20" id="Jkk-0r-8Pg"/>
+                            <constraint firstItem="bVQ-fu-X8m" firstAttribute="trailing" secondItem="ImK-f0-vO4" secondAttribute="trailing" constant="20" id="Xn6-5o-Rz3"/>
+                            <constraint firstItem="ImK-f0-vO4" firstAttribute="top" secondItem="bVQ-fu-X8m" secondAttribute="top" constant="20" id="dWr-md-k9o"/>
+                            <constraint firstItem="bVQ-fu-X8m" firstAttribute="trailing" secondItem="aH1-RK-cbu" secondAttribute="trailing" constant="16" id="sg6-pS-kgS"/>
+                            <constraint firstItem="aH1-RK-cbu" firstAttribute="top" secondItem="ImK-f0-vO4" secondAttribute="bottom" constant="50" id="vjI-tV-Xsb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UpQ-Vk-W85"/>
+                    <connections>
+                        <outlet property="descriptionText" destination="aH1-RK-cbu" id="809-GP-dqb"/>
+                        <outlet property="titleDescription" destination="ImK-f0-vO4" id="3KB-vW-Ihj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VHl-CR-MGk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="890.83969465648852" y="-35.211267605633807"/>
+            <point key="canvasLocation" x="890.76923076923072" y="-35.545023696682463"/>
         </scene>
     </scenes>
     <resources>

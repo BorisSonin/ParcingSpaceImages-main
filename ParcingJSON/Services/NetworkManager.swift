@@ -9,6 +9,8 @@ import Foundation
 
 let urlString = "https://go-apod.herokuapp.com/apod"
 
+var imageDescription: AstronomyPicture?
+
 class NetworkManager {
     static let shared = NetworkManager()
     private init() {}
@@ -25,3 +27,4 @@ class NetworkManager {
         }
     }
 }
+

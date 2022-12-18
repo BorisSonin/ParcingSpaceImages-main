@@ -9,21 +9,41 @@ import UIKit
 
 class DescriptionViewController: UIViewController {
 
+    var astronomyText:AstronomyPicture?
+    
+    @IBOutlet var descriptionText: UITextView!
+    @IBOutlet var titleDescription: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        parcingText()
+//        titleDescription.text = "\(String(describing: astronomyText?.title))"
+//        descriptionText.text = """
+//                                    \(String(describing: astronomyText?.date))
+//                                    \(String(describing: astronomyText?.explanation))
+//                                """
     }
     
+    func parcingText() {
 
-    /*
-    // MARK: - Navigation
+        guard let url = URL(string: urlString) else { return }
+        URLSession.shared.dataTask(with: url) { [weak self]  data, response, error in
+            guard let data else {
+                print(error?.localizedDescription ?? "No error description")
+                return
+            }
+            do {
+                let astronomy = try JSONDecoder().decode(AstronomyPicture.self, from: data)
+                print(astronomy)
+                DispatchQueue.main.async {
+                    self?.descriptionText.text = astronomy.explanation
+                    self?.titleDescription.text = astronomy.title
+                }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+            } catch let error {
+                print(error)
+            }
+        }.resume()
     }
-    */
-
 }
+
