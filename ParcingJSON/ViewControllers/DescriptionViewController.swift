@@ -8,24 +8,18 @@
 import UIKit
 
 class DescriptionViewController: UIViewController {
-
-    var astronomyText:AstronomyPicture?
     
     @IBOutlet var descriptionText: UITextView!
     @IBOutlet var titleDescription: UILabel!
     
+    var astronomyText:AstronomyPicture?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         parcingText()
-//        titleDescription.text = "\(String(describing: astronomyText?.title))"
-//        descriptionText.text = """
-//                                    \(String(describing: astronomyText?.date))
-//                                    \(String(describing: astronomyText?.explanation))
-//                                """
     }
     
-    func parcingText() {
-
+    private func parcingText() {
         guard let url = URL(string: urlString) else { return }
         URLSession.shared.dataTask(with: url) { [weak self]  data, response, error in
             guard let data else {
@@ -39,7 +33,7 @@ class DescriptionViewController: UIViewController {
                     self?.descriptionText.text = astronomy.explanation
                     self?.titleDescription.text = astronomy.title
                 }
-
+                
             } catch let error {
                 print(error)
             }
